@@ -3,12 +3,18 @@
 
 
 function isEven(num) {
-	if (num % 2 == 0){
+	if (num % 2 === 0){
 		return true;
 	}
-	else if (num % 2 != 0){
+	else {
 		return false;
 	} 
+}
+
+//refactor above function
+
+function isEven(num) {
+	return num % 2 === 0;
 }
 
 
@@ -16,8 +22,16 @@ function isEven(num) {
 
 
 function factorial(num) {
-
+	//define a result variable
+	var result = 1;
+	//calculate factorial and store value in result
+	for(var i = 2; i <= num; i++) {
+		result *= i;
+	}
+	//return the result variable
 }
+
+// factorial(4) 4 x 3 x 2 x 1
 
 
 // kebabToSnake() - Write a function kebabToSnake() which takes a single kebab-cased string argument and returns the snake_cased version.
